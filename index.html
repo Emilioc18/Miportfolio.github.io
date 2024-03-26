@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cb0dc3f2f3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/cara.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Tsu en informatica</p>
+                <h1>Hola mi nombre es <span>Jesus Cordero</span></h1>
+            </div>
+        </div>
+    </div>
+
+ <!-------------------About me------------------>   
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/yo.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Acerca de mi</h1>
+                    <p>Mi nombre es Jesús Cordero, y actualmente soy estudiante de TSU en Informática.
+                       Resido en Venezuela y mi pasión está en el desarrollo de páginas web.
+                       Aunque tengo conocimientos en frontend, mi verdadera fortaleza se encuentra en el backend.
+                        Me considero una persona responsable, trabajadora y con habilidades para colaborar en equipo.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('habilidades')">Habilidades</p>
+                        <p class="tab-links" onclick="opentab('tecnologias')">Tecnologias de desarrollo</p>
+                        <p class="tab-links"onclick="opentab('educacion')">Educación</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="habilidades">
+                        <ul>
+                            <li><span>Html</span><br>Nivel intermedio</br></li>
+                            <li><span>Css</span><br>Nivel básico</br></li>
+                            <li><span>Javascript</span><br>Nivel básico</br></li>
+                            <li><span>Php</span><br>Nivel intermedio</br></li>
+                            <li><span>Idiomas</span><br>Español: Nativo</br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="tecnologias">
+                        <ul>
+                            <li><span>Git</span><br>Nivel básico</br></li>
+                            <li><span>Github</span><br>Nivel básico</br></li>
+                            <li><span>Postman</span><br>Nivel básico</br></li>
+                            <li><span>Trello</span><br>Nivel básico</br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="educacion">
+                        <ul>
+                            <li><span>Titulo</span><br>Bachiller en ciencias</br></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-------------------Proyectos------------------>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Proyectos</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/gameworld.png" alt="">
+                    <div class="layer">
+                        <h3>Gameworld</h3>
+                        <p>Pagina de venta de productos online</p>
+                        <a href="https://github.com/Edduart/Gameworld"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/gameworld.png" alt="">
+                    <div class="layer">
+                        <h3>Gameworld</h3>
+                        <p>Pagina de venta de productos online</p>
+                        <a href="https://github.com/Edduart/Gameworld"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/gameworld.png" alt="">
+                    <div class="layer">
+                        <h3>Gameworld</h3>
+                        <p>Pagina de venta de productos online</p>
+                        <a href="https://github.com/Edduart/Gameworld"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------Contacto------------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contacte a</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>jesusemilioc18@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>04245564145</p>
+                    <div class="social-icons">
+                        <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://web.telegram.org/a/"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                    <a href="images/cvjesus.pdf" download class="btn">Descargar CV</a>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                        <input type="email" name="email" placeholder="Ingrese su correo" required>
+                        <textarea name="message" rows="6" placeholder="Añada un mensaje"></textarea>
+                        <button class="btn btn2" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
